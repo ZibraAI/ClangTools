@@ -17,7 +17,6 @@ endif()
 set(ClangToolsArchive "${CMAKE_CURRENT_SOURCE_DIR}/${ClangToolsPlatform}.tar.xz")
 set(ClangToolsDir "${CMAKE_CURRENT_BINARY_DIR}/${ClangToolsPlatform}")
 
-file(REMOVE_RECURSE "${ClangToolsDir}")
 file(ARCHIVE_EXTRACT INPUT "${ClangToolsArchive}" DESTINATION "${ClangToolsDir}")
 
 set(CLANG_TIDY_EXECUTABLE "${ClangToolsDir}/bin/clang-tidy${ClangToolsSuffix}"
